@@ -1,3 +1,4 @@
+@section("title","双因素认证")
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">

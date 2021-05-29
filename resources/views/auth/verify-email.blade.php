@@ -1,3 +1,4 @@
+@section("title","验证 E-mail")
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">

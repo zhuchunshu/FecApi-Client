@@ -12,9 +12,11 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    @foreach (config('fecapi.view.menu') as $key => $value)
+                    <x-jet-nav-link href="{{ route($value) }}" :active="request()->routeIs($value)">
+                        {{ __($key) }}
                     </x-jet-nav-link>
+                    @endforeach
                 </div>
             </div>
 

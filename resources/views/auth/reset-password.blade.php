@@ -1,3 +1,4 @@
+@section("title",__("重置密码"))
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
