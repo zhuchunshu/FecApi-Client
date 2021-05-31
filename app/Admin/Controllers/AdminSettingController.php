@@ -42,6 +42,7 @@ class AdminSettingController extends AdminController
                 $form->text('web-name', '站点名称')->value(get_options("web-name"));
                 $form->email('email', '联系邮箱')->value(get_options("email"));
                 $form->text('api-url', 'Api链接')->value(get_options("api-url"));
+                $form->text('web-icp', '备案号')->value(get_options("web-icp"));
             });
         });
     }
