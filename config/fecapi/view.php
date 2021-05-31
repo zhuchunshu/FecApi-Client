@@ -1,6 +1,7 @@
 <?php
 return [
     "menu" => [
-        "Dashboard" => "dashboard"
+        "Dashboard" => "dashboard",
+        "API-Tokens" => "api-tokens.index"
     ]
 ];
