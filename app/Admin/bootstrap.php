@@ -24,3 +24,11 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+
+// 自定义js脚本
+Admin::script(<<<JS
+    $("footer").remove()
+JS
+);
+
+Admin::menu()->add(include __DIR__."/menu.php");
