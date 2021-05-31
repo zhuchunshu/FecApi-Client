@@ -21,7 +21,9 @@
             @if (Laravel\Jetstream\Jetstream::hasPermissions())
                 <div class="col-span-6">
                     <x-jet-label for="permissions" value="{{ __('Permissions') }}" />
-
+                    <div class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        仅对 客户端Api 生效
+                    </div>
                     <div class="mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
                         @foreach (Laravel\Jetstream\Jetstream::$permissions as $permission)
                             <label class="flex items-center">
@@ -30,6 +32,7 @@
                             </label>
                         @endforeach
                     </div>
+                    
                 </div>
             @endif
         </x-slot>
