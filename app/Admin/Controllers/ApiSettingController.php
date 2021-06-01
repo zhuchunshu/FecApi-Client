@@ -8,10 +8,8 @@ use Dcat\Admin\Form;
 use Dcat\Admin\Layout\Content;
 use Dcat\Admin\Http\Controllers\AdminController;
 
-class AdminSettingController extends AdminController
+class ApiSettingController extends AdminController
 {
-
-
     /**
      * Create interface.
      *
@@ -38,12 +36,10 @@ class AdminSettingController extends AdminController
         return Form::make(new NullRepository(), function (Form $form) {
             $form->disableListButton();
             $form->action('setting/setting');
-            $form->tab('基本设置', function (Form $form) {
+            $form->tab('V1', function (Form $form) {
                 // tab 可以和 column 布局结合
-                $form->text('web-name', '站点名称')->value(get_options("web-name"));
-                $form->email('email', '联系邮箱')->value(get_options("email"));
-                $form->text('api-url', 'Api链接')->value(get_options("api-url"));
-                $form->text('web-icp', '备案号')->value(get_options("web-icp"));
+                $form->text('api-v1-qqhook-url', 'BotPro - SendApi链接')->value(get_options("api-v1-qqhook-url"));
+                $form->text('api-v1-qqhook-token', 'BotPro - SendApi连接Token')->value(get_options("api-v1-qqhook-token"));
             });
         });
     }

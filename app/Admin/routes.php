@@ -1,10 +1,11 @@
 <?php
 
+use Dcat\Admin\Admin;
+use Illuminate\Support\Facades\Route;
+use App\Admin\Controllers\UserController;
+use App\Admin\Controllers\ApiSettingController;
 use App\Admin\Controllers\AdminSwitchController;
 use App\Admin\Controllers\PersonalAccessTokenController;
-use App\Admin\Controllers\UserController;
-use Illuminate\Support\Facades\Route;
-use Dcat\Admin\Admin;
 
 Admin::routes();
 
@@ -22,6 +23,11 @@ Route::group([
         Route::prefix("setting")->group(function (){
             Route::get("/",[\App\Admin\Controllers\AdminSettingController::class,"create"]);
             Route::post("/",[\App\Admin\Controllers\AdminSettingController::class,"store"]);
+        });
+        // Api设置
+        Route::prefix("api")->group(function (){
+            Route::get("/",[\App\Admin\Controllers\ApiSettingController::class,"create"]);
+            Route::post("/",[\App\Admin\Controllers\ApiSettingController::class,"store"]);
         });
         // 开关
         Route::prefix("switch")->group(function(){

@@ -17,6 +17,13 @@ return [
         'parent_id'     => '1',
     ],
     [
+        'id'            => 7, // 此id只要保证当前的数组中是唯一的即可
+        'title'         => 'API设置',
+        'icon'          => '',
+        'uri'           => 'setting/api',
+        'parent_id'     => '1',
+    ],
+    [
         'id'            => 3, // 此id只要保证当前的数组中是唯一的即可
         'title'         => '功能开关',
         'icon'          => '',
@@ -44,4 +51,5 @@ return [
         'uri'           => 'ApiTokens',
         'parent_id'     => 4,
     ],
+
 ];
