@@ -37,6 +37,8 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection password
      * @property Grid\Column|Collection avatar
      * @property Grid\Column|Collection remember_token
+     * @property Grid\Column|Collection content
+     * @property Grid\Column|Collection hash
      * @property Grid\Column|Collection uuid
      * @property Grid\Column|Collection connection
      * @property Grid\Column|Collection queue
@@ -84,6 +86,8 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection password(string $label = null)
      * @method Grid\Column|Collection avatar(string $label = null)
      * @method Grid\Column|Collection remember_token(string $label = null)
+     * @method Grid\Column|Collection content(string $label = null)
+     * @method Grid\Column|Collection hash(string $label = null)
      * @method Grid\Column|Collection uuid(string $label = null)
      * @method Grid\Column|Collection connection(string $label = null)
      * @method Grid\Column|Collection queue(string $label = null)
@@ -136,6 +140,8 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection password
      * @property Show\Field|Collection avatar
      * @property Show\Field|Collection remember_token
+     * @property Show\Field|Collection content
+     * @property Show\Field|Collection hash
      * @property Show\Field|Collection uuid
      * @property Show\Field|Collection connection
      * @property Show\Field|Collection queue
@@ -183,6 +189,8 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection password(string $label = null)
      * @method Show\Field|Collection avatar(string $label = null)
      * @method Show\Field|Collection remember_token(string $label = null)
+     * @method Show\Field|Collection content(string $label = null)
+     * @method Show\Field|Collection hash(string $label = null)
      * @method Show\Field|Collection uuid(string $label = null)
      * @method Show\Field|Collection connection(string $label = null)
      * @method Show\Field|Collection queue(string $label = null)

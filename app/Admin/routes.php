@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Admin\Controllers\UserController;
 use App\Admin\Controllers\ApiSettingController;
 use App\Admin\Controllers\AdminSwitchController;
+use App\Admin\Controllers\ApiNoticeController;
 use App\Admin\Controllers\PersonalAccessTokenController;
 
 Admin::routes();
@@ -51,6 +52,19 @@ Route::group([
         Route::get('/{id}/edit', [PersonalAccessTokenController::class,'edit']);
         Route::put('/{id}', [PersonalAccessTokenController::class,'update']);
         Route::get('/{id}', [PersonalAccessTokenController::class,'show']);
+    });
+
+    //　Api 
+    Route::prefix("api")->group(function(){
+        // 通知文档
+
+        Route::prefix("noticeDoc")->group(function(){
+            Route::get('/', [ApiNoticeController::class,'index']);
+            Route::get('/{id}/edit', [ApiNoticeController::class,'edit']);
+            Route::put('/{id}', [ApiNoticeController::class,'update']);
+            Route::get('/{id}', [ApiNoticeController::class,'show']);
+        });
+
     });
 
 });

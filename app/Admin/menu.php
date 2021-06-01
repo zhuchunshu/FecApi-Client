@@ -52,4 +52,21 @@ return [
         'parent_id'     => 4,
     ],
 
+    [
+        'id'            => 8, // 此id只要保证当前的数组中是唯一的即可
+        'title'         => 'API',
+        'icon'          => 'feather icon-aperture',
+        'uri'           => '',
+        'parent_id'     => 0,
+        'permission_id' => 'test', // 与权限绑定
+        'roles'         => 'test-roles', // 与角色绑定
+    ],
+    [
+        'id'            => 5, // 此id只要保证当前的数组中是唯一的即可
+        'title'         => '通知文档',
+        'icon'          => '',
+        'uri'           => 'api/noticeDoc',
+        'parent_id'     => 8,
+    ],
+
 ];
