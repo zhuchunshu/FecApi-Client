@@ -26,6 +26,7 @@ class ApiNoticeController extends AdminController
             $grid->column('title');
             $grid->column('content');
             $grid->column('hash');
+            $grid->column('status',"状态");
             $grid->column('created_at');
             $grid->column('updated_at')->sortable();
         

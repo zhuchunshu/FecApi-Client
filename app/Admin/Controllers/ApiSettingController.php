@@ -40,7 +40,7 @@ class ApiSettingController extends AdminController
                 // tab 可以和 column 布局结合
                 $form->text('api-v1-qqhook-url', 'BotPro - SendApi链接')->value(get_options("api-v1-qqhook-url"));
                 $form->text('api-v1-qqhook-token', 'BotPro - SendApi连接Token')->value(get_options("api-v1-qqhook-token"));
-                $form->text('api-v1-qqhook-view', 'QQHOOK内容浏览地址')->value(get_options("api-v1-qqhook-view"));
+                $form->text('api-v1-qqhook-view', 'QQHOOK内容浏览地址')->value(get_options("api-v1-qqhook-view",route("view.api.notice","%s")));
             });
         });
     }

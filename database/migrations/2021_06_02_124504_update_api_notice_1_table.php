@@ -14,7 +14,7 @@ class UpdateApiNotice1Table extends Migration
     public function up()
     {
         Schema::table('api_notice', function (Blueprint $table) {
-            //
+            $table->string("status")->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class UpdateApiNotice1Table extends Migration
     public function down()
     {
         Schema::table('api_notice', function (Blueprint $table) {
-            $table->string("status")->nullable();
+            
         });
     }
 }
