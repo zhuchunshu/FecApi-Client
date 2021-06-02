@@ -62,6 +62,7 @@ Route::group([
             Route::get('/', [ApiNoticeController::class,'index']);
             Route::get('/{id}/edit', [ApiNoticeController::class,'edit']);
             Route::put('/{id}', [ApiNoticeController::class,'update']);
+            Route::delete('/{id}', [ApiNoticeController::class,'destroy']);
             Route::get('/{id}', [ApiNoticeController::class,'show']);
         });
 
