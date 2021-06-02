@@ -104,7 +104,7 @@
 
         <x-slot name="content">
             <div>
-                {{ __('Please copy your new API token. For your security, it won\'t be shown again.') }}
+                {{ __('生成成功!') }}
             </div>
 
             <x-jet-input x-ref="plaintextToken" type="text" readonly :value="$plainTextToken"
