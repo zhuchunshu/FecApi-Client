@@ -11,7 +11,6 @@ use Dcat\Admin\Http\Controllers\AdminController;
 class AdminSettingController extends AdminController
 {
 
-
     /**
      * Create interface.
      *
@@ -44,6 +43,10 @@ class AdminSettingController extends AdminController
                 $form->email('email', '联系邮箱')->value(get_options("email"));
                 $form->text('api-url', 'Api链接')->value(get_options("api-url"));
                 $form->text('web-icp', '备案号')->value(get_options("web-icp"));
+            })->tab('API设置',function(Form $form){
+                $form->text('s-api-baidu-appid', '百度内容审核APPID')->value(get_options("s-api-baidu-appid"));
+                $form->text('s-api-baidu-apikey', '百度内容审核APIKEY')->value(get_options("s-api-baidu-apikey"));
+                $form->text('s-api-baidu-secretkey', '百度内容审核SecretKey')->value(get_options("s-api-baidu-secretkey"));
             });
         });
     }
